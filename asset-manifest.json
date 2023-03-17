@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.47999009.js",
+    "main.css": "/static/css/main.195bfe26.css",
+    "main.js": "/static/js/main.5e12203f.js",
     "static/js/787.d1d4a2c2.chunk.js": "/static/js/787.d1d4a2c2.chunk.js",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/OpenSans-VariableFont_wdth,wght.ttf": "/static/media/OpenSans-VariableFont_wdth,wght.ceb05254cedfa895b512.ttf",
+    "static/media/UQ_logo.svg": "/static/media/UQ_logo.2381fa8e4814744f25b21c9bb06d2029.svg",
     "index.html": "/index.html",
-    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.47999009.js.map": "/static/js/main.47999009.js.map",
+    "main.195bfe26.css.map": "/static/css/main.195bfe26.css.map",
+    "main.5e12203f.js.map": "/static/js/main.5e12203f.js.map",
     "787.d1d4a2c2.chunk.js.map": "/static/js/787.d1d4a2c2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.47999009.js"
+    "static/css/main.195bfe26.css",
+    "static/js/main.5e12203f.js"
   ]
 }
