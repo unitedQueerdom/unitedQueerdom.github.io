@@ -3,15 +3,19 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 15vmin;
   pointer-events: none;
+  margin: 5vmin;
+  /* border-width: 1px;
+    border-style: solid;
+    border-color: black; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
   background-color: #282c34;
@@ -26,6 +30,59 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spaced {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.grown {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+.bottom {
+  display: flex;
+  padding-top: 12vmin;
+  /* align-items: flex-end;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black; */
+}
+
+body {
+  font-family: 'OpenSans', sans-serif;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('./assets//OpenSans-VariableFont_wdth\,wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @keyframes App-logo-spin {
