@@ -1,9 +1,9 @@
 import React, { CSSProperties, useEffect, useState } from "react";
-import logo from "./logo.svg";
 import uqlogo from "./assets/UQ_logo.svg";
+import eventlogo from "./assets/event_logo.svg";
 import "./App.css";
-import { SocialIcon } from "react-social-icons";
 import TelegramLoginButton, { TelegramUser } from "telegram-login-button";
+import SocialButton, { SocialButtonProps } from "./SocialButton";
 
 function useIsMobile() {
   const [isMobile, setIsMobile] = useState(false);
@@ -39,46 +39,48 @@ function App() {
   function socials() {
     const style: CSSProperties = {
       display: "flex",
-      flexDirection: isMobile ? "column" : "row",
+      flexDirection: "column",
       alignItems: "center",
       gap: `15px`,
     };
 
+    const details: SocialButtonProps[] = [
+      {
+        url: "https://t.me/unitedqueerdom",
+        text: isEnglish ? "Telegram channel" : "Телеграм канал",
+      },
+      {
+        url: "https://www.instagram.com/unitedqueerdom/",
+        text: isEnglish ? "Instagram" : "Инстаграм",
+      },
+      {
+        url: "https://www.tiktok.com/@unitedqueerdom",
+        text: isEnglish ? "TikTok" : "ТикТок",
+      },
+      {
+        url: "https://www.linkedin.com/company/unitedqueerdom/",
+        text: isEnglish ? "LinkedIn" : "Линкедин",
+      },
+      {
+        url: "https://www.facebook.com/unitedqueerdom/",
+        text: isEnglish ? "Facebook" : "Фейсбук",
+      },
+      {
+        url: "https://www.eventbrite.co.uk/o/united-queerdom-67531342363",
+        text: isEnglish ? "Eventbrite" : "Мероприятия",
+        logo: eventlogo,
+      },
+    ];
+
     return (
       <div style={style} className="centered">
-        <SocialIcon url="https://t.me/unitedqueerdom" />
-        {/* {isTesting && (
-                <div>
-                  <TelegramLoginButton
-                    botName="UnitedQueerdom_bot"
-                    dataOnauth={(user: TelegramUser) => {
-                      if (user.username.length > 0) {
-                        window.location.href = `https://airtable.com/appACty8e1HF61bIZ/paggfYqRFiuJRowWd/form?prefill_Telegram=${user.username}`;
-                      } else {
-                        setRequest(true);
-                      }
-                    }}
-                  />
-                  {isRequestingUsername && (
-                    <div style={{ color: "red" }}>
-                      <p>
-                        Please{" "}
-                        <a href="https://telegram.org/faq?setln=en#q-what-are-usernames-how-do-i-get-one">
-                          set a Telegram username
-                        </a>{" "}
-                        to continue
-                      </p>
-                      <p>Пожалуста установите username в Telegram</p>
-                    </div>
-                  )}
-                </div>
-              )} */}
-
-        {/* <SocialIcon url="https://t.me/queerdom_bot" /> */}
-        <SocialIcon url="https://www.instagram.com/unitedqueerdom/" />
-        <SocialIcon url="https://www.tiktok.com/@unitedqueerdom" />
-        <SocialIcon url="https://www.linkedin.com/company/unitedqueerdom/" />
-        <SocialIcon url="https://www.facebook.com/unitedqueerdom/" />
+        {details.map((detail) => (
+          <SocialButton
+            url={detail.url}
+            text={detail.text}
+            logo={detail.logo}
+          />
+        ))}
       </div>
     );
   }
@@ -97,12 +99,25 @@ function App() {
           />
           {/* </button> */}
           <div>
-            {!isMobile && socials()}
             <h4>Central Asia & Eastern Europe LGBTQ+ Community</h4>
           </div>
         </div>
-        {isMobile && socials()}
+        {socials()}
       </header>
+    );
+  }
+
+  function footer() {
+    const email = "hello@unitedqueerdom.org";
+    return (
+      <footer>
+        <div className="row centered">
+          <SocialButton
+            text={isEnglish ? "Contact us" : "Связаться с нами"}
+            url={`mailto:${email}`}
+          />
+        </div>
+      </footer>
     );
   }
 
@@ -120,13 +135,13 @@ function App() {
         }}
       >
         <div style={{}}>
-          <h1
+          {/* <h1
             style={{
               marginBottom: 50,
             }}
           >
             We're growing here 🪴
-          </h1>
+          </h1> */}
           <div
             className="row"
             style={{
@@ -135,14 +150,18 @@ function App() {
               alignItems: "center",
             }}
           >
-            <SocialIcon url="https://t.me/+MXOdJ9ytlMoxNmFk" />
-            <a href="https://t.me/+MXOdJ9ytlMoxNmFk">
-              {isEnglish && <h1>Join</h1>}
-              {!isEnglish && <h1>Присоединиться</h1>}
-            </a>
+            <SocialButton
+              url="https://t.me/+MXOdJ9ytlMoxNmFk"
+              text={
+                isEnglish
+                  ? "Join our Telegram group"
+                  : "Присоединиться к Телеграм группе"
+              }
+            />
           </div>
         </div>
       </div>
+      {footer()}
     </div>
   );
 }
