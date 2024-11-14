@@ -29,7 +29,7 @@ function App() {
   const isMobile = useIsMobile();
 
   const browserLanguage = navigator.language;
-  const isEnglish = false; // browserLanguage.startsWith("en");
+  const isEnglish = browserLanguage.startsWith("en");
 
   const handleImageClick = () => {
     console.log("Image clicked!");
