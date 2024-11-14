@@ -9,39 +9,18 @@ export type SocialButtonProps = {
 export default function SocialButton({ url, text, logo }: SocialButtonProps) {
   return (
     // rounded button with black border 2px
-    <div
-      className="row"
-      style={{
-        gap: 5,
-        alignItems: "center",
-        margin: 5,
-        borderColor: "black",
-        borderWidth: 1,
-        borderStyle: "dotted",
-        borderRadius: 50,
-        padding: 5,
-        paddingLeft: 10,
-        paddingRight: 10,
-        maxHeight: 55,
-        minWidth: 200,
-        width: 250,
-        maxWidth: 500,
-      }}
-    >
+    <a className="row social-button" href={url}>
       {!logo && <SocialIcon url={url} />}
-      <a
+      <div
         className="row"
         style={{
-          textDecoration: "none",
-          color: "inherit",
           alignItems: "center",
         }}
-        href={url}
       >
         {logo && <img src={logo} style={{ paddingRight: 5 }} />}
-        <div>{text}</div>
-      </a>
-    </div>
+        <div style={{ maxWidth: 185, textAlign: "left" }}>{text}</div>
+      </div>
+    </a>
   );
 }
 

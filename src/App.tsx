@@ -94,8 +94,8 @@ function App() {
             src={uqlogo}
             alt="logo"
             className="App-logo"
-            onClick={handleImageClick}
-            style={{ cursor: "pointer", pointerEvents: "all" }}
+            // onClick={handleImageClick}
+            // style={{ cursor: "pointer", pointerEvents: "all" }}
           />
           {/* </button> */}
           <div>
