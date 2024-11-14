@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.434e0bae.css",
-    "main.js": "/static/js/main.45afbd9e.js",
+    "main.js": "/static/js/main.901ab0b5.js",
     "static/js/787.d1d4a2c2.chunk.js": "/static/js/787.d1d4a2c2.chunk.js",
     "static/media/OpenSans-VariableFont_wdth,wght.ttf": "/static/media/OpenSans-VariableFont_wdth,wght.ceb05254cedfa895b512.ttf",
     "static/media/UQ_logo.svg": "/static/media/UQ_logo.2381fa8e4814744f25b21c9bb06d2029.svg",
     "index.html": "/index.html",
     "static/media/event_logo.svg": "/static/media/event_logo.c5a8d270a692dfb7f328996d03eefcce.svg",
     "main.434e0bae.css.map": "/static/css/main.434e0bae.css.map",
-    "main.45afbd9e.js.map": "/static/js/main.45afbd9e.js.map",
+    "main.901ab0b5.js.map": "/static/js/main.901ab0b5.js.map",
     "787.d1d4a2c2.chunk.js.map": "/static/js/787.d1d4a2c2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.434e0bae.css",
-    "static/js/main.45afbd9e.js"
+    "static/js/main.901ab0b5.js"
   ]
 }
